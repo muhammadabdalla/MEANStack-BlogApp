@@ -1,0 +1,18 @@
+<div class="card col-8 m-auto mt-5 " *ngIf="user;else GettingData">
+    <div class="card-header bg-success">
+        User ID :{{user.userId}} <button class="btn btn-primary ms-5"
+            (click)="update(user.userId,user.id)">update</button>
+    </div>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p><span class="link-danger">Post ID :</span> {{user.id}}</p>
+            <p><span class="link-danger"> Title :</span> {{user.title}}</p>
+            <p><span class="link-danger">Body :</span> {{user.body}}</p>
+
+        </blockquote>
+    </div>
+</div>
+
+<ng-template #GettingData>
+    <h1 class="alert alert-danger">Getting Data Now ....</h1>
+</ng-template>

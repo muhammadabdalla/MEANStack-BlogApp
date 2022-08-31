@@ -1,0 +1,13 @@
+<div class="card col-8 m-auto mt-5 " *ngFor="let u of AllUsers">
+    <h3 class="card-header bg-success d-flex">
+        User ID :{{u.userId}} ,Post Id:{{u.id}}
+        <button class="btn btn-primary " style="width:min-content; margin-left: 450px;"
+            (click)="delete(u.id)">x</button>
+    </h3>
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p><span class="link-danger">postTitle :</span> {{u.title}}</p>
+            <footer class="blockquote-footer"><a routerLink="/posts/{{u.id}}">details</a> </footer>
+        </blockquote>
+    </div>
+</div>
